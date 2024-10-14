@@ -1,24 +1,29 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Geoflix</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Filmes e Séries</title>
 </head>
 
 <body>
 
-    <header>Filmes da Marvel</header>
+    <header>
+        <h1>Filmes e Séries</h1>
+        <button id="toggle-theme">Modo Escuro</button>
+    </header>
 
     <section class="chamada">
         <div class="chamada-texto">
-            <h1>Homem-Aranha no Aranhaverso</h1>
-            <p>#Homem-aranha</p>
+            <h2>Homem-Aranha no Aranhaverso</h2>
+            <p>Uma animação emocionante que redefine o gênero!</p>
         </div>
-
-        <div>
+        <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/SS6ABPkfmBE?si=SOWHcO5686rJ4oMq"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -27,26 +32,45 @@
     </section>
 
     <section class="categoria">
-        <h2>Filmes vingadores</h2>
+        <h2>Filmes Vingadores</h2>
         <div class="categoria-videos">
-            <a href="https://www.youtube.com/watch?v=YLorLVa95Xo">
-             <img src="https://img.youtube.com/vi/MG4fS7IhopY/maxresdefault.jpg" />
-        </a>
-        <a href="https://www.youtube.com/watch?v=U7JG6FMoEdM">
-            <img src="https://img.youtube.com/vi/U7JG6FMoEdM/maxresdefault.jpg" />
-       </a>
-       <a href="https://www.youtube.com/watch?v=PgrmbRID0eY">
-        <img src="https://img.youtube.com/vi/PgrmbRID0eY/maxresdefault.jpg" />
-        </a>
-        <a href="https://www.youtube.com/watch?v=4jGRyEa2jhE">
-            <img src="https://img.youtube.com/vi/4jGRyEa2jhE/maxresdefault.jpg" />
-        </a>
-        <a href="https://www.youtube.com/watch?v=Fl89Ym_fQJc">
-            <img src="https://img.youtube.com/vi/7SlILk2WMTI/maxresdefault.jpg" />
-        </a>
-
+            <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c">
+                <img src="https://img.youtube.com/vi/TcMBFSGVi1c/maxresdefault.jpg" alt="Vingadores: Ultimato" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=FR9iLjOubWc">
+                <img src="https://img.youtube.com/vi/FR9iLjOubWc/maxresdefault.jpg" alt="Pantera Negra: Wakanda Para Sempre" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=X23XCFgdh2M">
+                <img src="https://img.youtube.com/vi/X23XCFgdh2M/maxresdefault.jpg" alt="Doutor Estranho no Multiverso da Loucura" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=zg8pHQrxlfY">
+                <img src="https://img.youtube.com/vi/zg8pHQrxlfY/maxresdefault.jpg" alt="Spider-Man: Sem Volta Para Casa" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=zgdDOLMSsVs">
+                <img src="https://img.youtube.com/vi/zgdDOLMSsVs/maxresdefault.jpg" alt="Os Eternos" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=1c_W_4cNLn0">
+                <img src="https://img.youtube.com/vi/1c_W_4cNLn0/maxresdefault.jpg" alt="Thor: Amor e Trovão" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=Fp9pNPdNwjI">
+                <img src="https://img.youtube.com/vi/Fp9pNPdNwjI/maxresdefault.jpg" alt="Viúva Negra" />
+            </a>
+        </div>
     </section>
 
+    <footer>
+        <p>&copy; 2024 Filmes e Séries. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
+        });
+    </script>
 </body>
 
 </html>

@@ -1,55 +1,99 @@
 body {
-    color:white;
-    background: black;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
-header{
-    border-bottom: solid  2px rgb(42, 122, 228);
+
+header {
+    background: #333;
+    color: white;
     padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
+    text-align: center;
 }
+
+h1 {
+    margin: 0;
+}
+
+button {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
+
 .chamada {
-    background: rgb(141, 3, 25);
-    padding-bottom: 80PX;
-    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.chamada-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.video-container {
+    flex: 1;
     display: flex;
     justify-content: center;
 }
-.chamada-texto {
-    margin-right: 5%;
+
+.categoria {
+    padding: 20px;
 }
-h1 {
-    font-size: 29px;
-}
-p {
-    font-size: 20px;
-}
-img {
-    height: 200px;
-}
+
 .categoria-videos {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+.categoria-videos a {
+    flex: 1 1 calc(25% - 10px);
+    position: relative;
 }
 
 .categoria-videos img {
-    opacity: 0.5;
-}
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: solid red;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
-.categoria h2 {
-    color: rgb(42, 122, 228); 
+.categoria-videos img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode button {
+    background: #555;
+}
+
+.dark-mode button:hover {
+    background: #666;
 }
